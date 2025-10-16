@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 export default function LiveEventsPage() {
   return (
     <div className="min-h-screen bg-white">
-      
-      <div className="py-12" style={{ backgroundColor: '#D5AB30' }} >
+      {/* Header with your gold color */}
+      <div className="py-12" style={{ backgroundColor: '#D5AB30' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold text-white mb-4">
             Live Events
@@ -22,13 +22,23 @@ export default function LiveEventsPage() {
         </div>
       </div>
 
-      
+      {/* Events Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {liveEvents.map((event) => (
-            <EventCard key={event.id} event={event} />
-          ))}
-        </div>
+        {liveEvents.length > 0 ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {liveEvents.map((event) => (
+              <EventCard key={event.id} event={event} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">📅</span>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-700 mb-2">No Live Events</h3>
+            <p className="text-gray-500">Check back soon for upcoming hiking events!</p>
+          </div>
+        )}
       </div>
     </div>
   );

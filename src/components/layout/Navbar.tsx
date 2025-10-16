@@ -24,12 +24,6 @@ const Navbar = () => {
             >
               Live Events
             </Link>
-            <Link
-              href="/events/past"  
-              className={pathname === "/events/past" ? "navbar-link-active" : "navbar-link"}
-            >
-              Past Events
-            </Link>
           </div>
         </div>
       </div>

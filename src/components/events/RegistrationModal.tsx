@@ -68,25 +68,13 @@ const RegistrationModal = ({ event, isOpen, onClose }: RegistrationModalProps) =
        
         <div className="p-6" style={{ backgroundColor: '#F5EBCE' }}>
           <h3 className="font-bold text-lg mb-2 text-gray-950">{event.name}</h3>
-          <p className="text-gray-700 mb-1">{event.description}</p>
-          <p className="text-gray-600 text-sm mb-1">
+          <p className="text-gray-800 mb-1 text-2xl">{event.description}</p>
+          <p className="text-gray-700 text-xl mb-1">
             <strong>Date:</strong> {event.date}
           </p>
-          <p className="text-gray-600 text-sm mb-2">
+          <p className="text-gray-700 text-xl mb-2">
             <strong>Location:</strong> {event.location}
           </p>
-          
-          
-          <div className="bg-white p-3 rounded-lg">
-            <p className="text-gray-800 font-medium">
-              Selected: <span className="text-gray-600">{selectedTierName}</span>
-            </p>
-            <p className="text-gray-800 font-medium">
-              Registration Fee: <span style={{ color: '#D5AB30' }} className="font-bold">
-                Kshs. {formData.registrationFee?.toLocaleString()}
-              </span>
-            </p>
-          </div>
         </div>
 
         
