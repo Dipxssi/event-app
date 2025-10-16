@@ -4,10 +4,10 @@ export const liveEvents: Event[] = [
   {
     id: "ushago-hike-2025",
     name: "#Ushago!",
-    description: "A Hike for Rural Impact",
+    description: "#Hike4UshagoTransformation",
     date: "November 29th, 2025",
     location: "Ngong Road Forest Sanctuary",
-    posterUrl: "/poster.png",
+    posterUrl: "/ushago.png",
    
     pricingTiers: [
       {

@@ -64,7 +64,7 @@ export default function PaymentStep({ formData, onChange }: PaymentStepProps) {
 
       {/* Payment Method Selection */}
       <div className="mb-6">
-        <label className="form-label">Payment Method</label>
+        <label className="form-label">Payment Method   (Please pay the complete amount before moving forward)</label>
         <div className="space-y-3">
           <label className="flex items-center cursor-pointer p-3 border rounded-lg hover:bg-gray-50">
             <input

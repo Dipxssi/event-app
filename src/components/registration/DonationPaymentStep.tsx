@@ -84,7 +84,7 @@ export default function DonationPaymentStep({ formData, onChange }: DonationPaym
                 <h4 className="font-semibold mb-2 ">ABSA Bank Payment Information</h4>
                 <p><strong>Bank Name:</strong> ABSA Bank Kenya</p>
                 <p><strong>Account Name:</strong> Possibilities Africa</p>
-                <p><strong>Account Number:</strong> [Account Number]</p>           
+                <p><strong>Account Number:</strong> 2046221209</p>           
               </div>
 
               <div>
