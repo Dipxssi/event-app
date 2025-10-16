@@ -30,7 +30,7 @@ const RegistrationModal = ({ event, isOpen, onClose }: RegistrationModalProps) =
     }
   }, [formData.participantTier, event.pricingTiers]);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -342,15 +342,15 @@ const RegistrationModal = ({ event, isOpen, onClose }: RegistrationModalProps) =
               </div>
 
               <div>
-                <label className="form-label">Mpesa Message</label>
-                <input
-                  type="text"
+                <label className="form-label">M-Pesa Confirmation Message</label>
+                <textarea
                   name="mpesaTransaction"
                   required
-                  placeholder="Enter M-Pesa message"
-                  className="form-input text-gray-900"
-                  value={formData.mpesaTransaction || ''}
-                  onChange={handleInputChange}
+                  placeholder="Paste your complete M-Pesa confirmation message here..."
+        className="form-input text-gray-900 min-h-[120px] resize-y"
+        value={formData.mpesaTransaction || ''}
+        onChange={handleInputChange}
+        rows={5}
                 />
                 <p className="text-sm text-gray-600 mt-1">
                   Complete payment first, then enter the transaction code
