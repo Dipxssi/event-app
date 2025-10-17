@@ -1,3 +1,79 @@
+export interface RegistrationForm {
+  // Participation
+  participationType: 'solo' | 'team' | 'sponsor' | 'donation'; 
+  sponsorshipType?: 'myself' | 'someone';
+  
+  // Solo participant info
+  fullName?: string;
+  gender?: string;
+  phoneNumber?: string;
+  emailAddress?: string;
+  
+  
+  sponsorName?: string;
+  sponsorPhone?: string;
+  sponsorEmail?: string;
+  relationshipToParticipant?: string;
+  
+  
+  participantName?: string;
+  participantGender?: string;
+  participantPhone?: string;
+  participantEmail?: string;
+  participantTier?: string; 
+  participantTshirtSize?: string;
+  
+  // Team info
+  teamLeaderName?: string;
+  teamSize?: string;
+  customTeamSize?: number;
+  adultCount?: number;
+  studentCount?: number;
+  customAdultCount?: number;
+  customStudentCount?: number;
+  totalTeamCost?: number;
+  
+  // T-shirt sizes
+  tshirtSize?: string;
+  tshirtSizeS?: number;
+  tshirtSizeM?: number;
+  tshirtSizeL?: number;
+  tshirtSizeXL?: number;
+  tshirtSizeXXL?: number;
+  
+  // Participation details
+  preferredTrail?: string;
+  
+  // Payment
+  registrationFee?: number;
+  paymentMethod?: string;
+  mpesaTransaction?: string;
+  bankTransactionMessage?: string;
+  
+  // Donation
+  donorName?: string;
+  donationAmount?: number;
+  
+  // Additional info
+  howDidYouHear?: string;
+  
+  // Emergency contact
+  emergencyContactName?: string;
+  emergencyContactPhone?: string;
+  
+  // Consent
+  hasConsent?: boolean;
+  
+  // Meta
+  date?: string;
+}
+
+export interface PricingTier {
+  id: string;
+  name: string;  
+  price: number;
+}
+
 export interface Event {
   id: string;
   name: string;
@@ -5,75 +81,13 @@ export interface Event {
   date: string;
   location: string;
   posterUrl: string;
-  pricingTiers: PricingTier[];
+  pricingTiers: PricingTier[]; 
   isLive: boolean;
   isPast: boolean;
-  trails: Trail[];
+  trails: {
+    id: string;
+    name: string;
+    distance: string;
+    difficulty: string;
+  }[];
 }
-
-export interface PricingTier {
-  id: string;
-  name: string;
-  price: number;
-  description?: string;
-}
-
-export interface Trail {
-  id: string;
-  name: string;
-  distance: string;
-  difficulty: 'Easy' | 'Moderate' | 'Advanced';
-}
-
-export interface RegistrationForm {
-  // Participation and Sponsorship Selection
-  participationType: 'solo' | 'team' | 'donation';
-  sponsorshipType?: 'sponsor_myself' | 'sponsor_someone_else'; // Only for solo
-  teamSize?: string | number; // Only for team
-  customTeamSize?: number; // If they choose "Other" for team size
-  
-  // ✅ Team-specific fields
-  teamLeaderName?: string; // Changed from fullName for teams
-  adultCount?: number;
-  studentCount?: number;
-  customAdultCount?: number; // If more than 10 adults
-  customStudentCount?: number; // If more than 10 students
-  totalTeamCost?: number; // Calculated total
-  
-  // T-shirt size distribution for teams
-  tshirtSizeS?: number;
-  tshirtSizeM?: number;
-  tshirtSizeL?: number;
-  tshirtSizeXL?: number;
-  tshirtSizeXXL?: number;
-  
-  // For donation-only users
-  donorName?: string;
-  
-  // Payment method for ALL types
-  paymentMethod?: 'mpesa' | 'bank';
-  bankTransactionMessage?: string;
-  
-  // Simplified participant fields (for solo only)
-  fullName?: string;
-  gender?: 'Male' | 'Female';
-  phoneNumber?: string;
-  emailAddress?: string;
-  emergencyContactName?: string;
-  emergencyContactPhone?: string;
-  howDidYouHear?: 'Friend' | 'Church' | 'Website' | 'WhatsApp' | 'Social media' | 'Other';
-  
-  // Participation details
-  preferredTrail?: string;
-  tshirtSize?: 'S' | 'M' | 'L' | 'XL' | 'XXL'; // For solo only
-  
-  // Registration & Payment
-  registrationFee: number;
-  participantTier?: string; // For solo only
-  mpesaTransaction?: string;
-  
-  // Consent
-  hasConsent: boolean;
-  date: string;
-}
-

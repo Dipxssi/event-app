@@ -33,6 +33,42 @@ export default function TeamInfoStep({ formData, onChange, event }: TeamInfoStep
           You are registering as a team leader. Please provide the team details below.
         </p>
       </div>
+      
+      <div className="mb-6">
+        <label className="form-label">Team Size *</label>
+        <select
+          name="teamSize"
+          required
+          className="form-input text-gray-900"
+          value={formData.teamSize || ''}
+          onChange={onChange}
+        >
+          <option value="">Select team size</option>
+          <option value="2">2 People</option>
+          <option value="3">3 People</option>
+          <option value="4">4 People</option>
+          <option value="5">5 People</option>
+          <option value="custom">Custom (More than 5)</option>
+        </select>
+      </div>
+
+      {/* Custom team size input */}
+      {formData.teamSize === 'custom' && (
+        <div className="mb-6">
+          <label className="form-label">Custom Team Size *</label>
+          <input
+            type="number"
+            name="customTeamSize"
+            min="6"
+            max="50"
+            required
+            className="form-input text-gray-900"
+            placeholder="Enter exact number of team members"
+            value={formData.customTeamSize || ''}
+            onChange={onChange}
+          />
+        </div>
+      )}
 
       <div className="grid md:grid-cols-2 gap-4 mb-6">
         <div>
