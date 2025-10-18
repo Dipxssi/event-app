@@ -61,7 +61,7 @@ export default function ConsentStep({ formData, onChange }: ConsentStepProps) {
             </li>
             <li className="flex items-start">
               <span className="text-yellow-600 mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-droplets-icon lucide-droplets"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg></span>
-              <span><strong>Carry your own drinking water</strong> </span>
+              <span><strong>Carry enough drinking water</strong> </span>
             </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@ export default function ConsentStep({ formData, onChange }: ConsentStepProps) {
         <h4 className="text-md font-semibold mb-4 text-gray-700">Liability Waiver & Consent</h4>
         <div className="bg-gray-50 p-4 rounded-lg mb-4">
           <p className="text-sm text-gray-700">
-           I acknowledge that hiking involves inherent risks, including possible injury. I agree to participate voluntarily and accept all risks. I release the organizers from any liability arising from my participation in this event. I confirm that I am physically fit and able to take part in the hike.
+            I understand that hiking may involve some physical challenges. I choose to participate voluntarily and take responsibility for my own safety and wellbeing. I confirm that I am fit to take part and acknowledge that the organizers are not liable for unforeseen incidents beyond their control.
           </p>
         </div>
       </div>

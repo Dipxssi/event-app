@@ -32,7 +32,7 @@ export const liveEvents: Event[] = [
       },
       {
         id: "10km-moderate", 
-        name: "10km Advanced",
+        name: "10km ",
         distance: "10km",
         difficulty: "Moderate"
       }
