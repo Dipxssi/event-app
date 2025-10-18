@@ -26,7 +26,7 @@ export default function RegistrationSuccess({ formData, isDonationOnly }: Regist
           <p className="text-xl text-gray-600 mb-6">
             {isDonationOnly 
               ? `Thank you ${formData.donorName} for your generous donation to support our cause!`
-              : `Thank you ${formData.fullName} for registering for #Ushago!`
+              : `Thank you ${formData.fullName || formData.teamLeaderName || 'participant'} for registering for #Hike4UshagoTransformation!`
             }
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function RegistrationSuccess({ formData, isDonationOnly }: Regist
              See you on November 29th!
             </h2>
             <p className="text-blue-700 mb-4">
-              We will confirm your registration through email shortly.
+              You&apos;ll receive more details within 24 hours!
             </p>
           </div>
         )}

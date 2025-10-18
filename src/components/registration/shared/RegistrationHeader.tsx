@@ -7,14 +7,13 @@ interface RegistrationHeaderProps {
   onClose: () => void;
 }
 
-export default function RegistrationHeader({ event, isDonationOnly, onClose }: RegistrationHeaderProps) {
+export default function RegistrationHeader({  isDonationOnly, onClose }: RegistrationHeaderProps) {
   return (
     <div className="px-6 py-4 flex justify-between items-center" style={{ backgroundColor: '#D5AB30' }}>
       <div>
         <h1 className="text-2xl font-bold text-white">
           {isDonationOnly ? 'Donation Form' : 'Hike Registration Form'}
         </h1>
-        <p className="text-white/90">Event: {event.name}</p>
       </div>
    
       <button 
