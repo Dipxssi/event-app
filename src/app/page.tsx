@@ -21,7 +21,7 @@ export default function HomePage() {
             </div>
 
             {/* Event Banner */}
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-[40rem] mx-auto ">
             
               <Link href="/register" className="block group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl transition-transform duration-300 group-hover:scale-[1.02]">
@@ -31,7 +31,7 @@ export default function HomePage() {
                       alt={`${upcomingEvent.name} - ${upcomingEvent.description}`}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 90vw"
+                      sizes="(max-width: 500px) 100vw, 90vw"
                       priority
                     />
                     

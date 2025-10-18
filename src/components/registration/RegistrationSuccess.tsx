@@ -26,7 +26,7 @@ export default function RegistrationSuccess({ formData, isDonationOnly }: Regist
           <p className="text-xl text-gray-600 mb-6">
             {isDonationOnly 
               ? `Thank you ${formData.donorName} for your generous donation to support our cause!`
-              : `Thank you ${formData.fullName || formData.teamLeaderName || 'participant'} for registering for #Hike4UshagoTransformation!`
+              : `Thank you ${formData.fullName || formData.teamLeaderName || formData.sponsorName ||'participant'} for registering for #Hike4UshagoTransformation!`
             }
           </p>
         </div>
